@@ -82,21 +82,21 @@ fn colorhandler(windspeed: f32) -> colored::Color {
 
 fn categoryhandler(windspeed: f32) -> String {
     if windspeed >= 157.0 {
-        "Category 5".to_string()
+        "Category 5          ".to_string()
     } else if windspeed >= 130.0 {
-        "Category 4".to_string()
+        "Category 4          ".to_string()
     } else if windspeed >= 111.0 {
-        "Category 3".to_string()
+        "Category 3          ".to_string()
     } else if windspeed >= 96.0 {
-        "Category 2".to_string()
+        "Category 2          ".to_string()
     } else if windspeed >= 74.0 {
-        "Category 1".to_string()
+        "Category 1          ".to_string()
     } else if windspeed >= 39.0 {
-        "Tropical Storm".to_string()
+        "Tropical Storm      ".to_string()
     } else if windspeed > 1.0 {
-        "Tropical Depression".to_string()
+        "Tropical Depression ".to_string()
     } else {
-        "Dead".to_string()
+        "Dead                ".to_string()
     }
 }
 
