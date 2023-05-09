@@ -29,11 +29,11 @@ fn main() {
         let d1 = predict_windspeed(windspeed, shear, pressure, 24.0);
         let d7 = predict_windspeed(windspeed, shear, pressure, 168.0);
 
-        println!("After 1 hour: {} MPH ({})                 ", h1.to_string().color(colorhandler(h1)), categoryhandler(h1));
-        println!("After 5 hours: {} MPH ({})                ", h5.to_string().color(colorhandler(h5)), categoryhandler(h5));
-        println!("After 10 hours: {} MPH ({})               ", h10.to_string().color(colorhandler(h10)), categoryhandler(h10));
-        println!("After 1 day: {} MPH ({})                  ", d1.to_string().color(colorhandler(d1)), categoryhandler(d1));
-        println!("After 7 days: {} MPH ({})                 ", d7.to_string().color(colorhandler(d7)), categoryhandler(d7));
+        println!("After 1 hour: {} MPH ({})                   ", h1.to_string().color(colorhandler(h1)), categoryhandler(h1));
+        println!("After 5 hours: {} MPH ({})                  ", h5.to_string().color(colorhandler(h5)), categoryhandler(h5));
+        println!("After 10 hours: {} MPH ({})                 ", h10.to_string().color(colorhandler(h10)), categoryhandler(h10));
+        println!("After 1 day: {} MPH ({})                    ", d1.to_string().color(colorhandler(d1)), categoryhandler(d1));
+        println!("After 7 days: {} MPH ({})                   ", d7.to_string().color(colorhandler(d7)), categoryhandler(d7));
         println!();
     }
 }
@@ -42,7 +42,7 @@ fn getinput(prompt: &str) -> f32 {
     println!("{prompt}");
     {
         let pos = cursor::position().unwrap();
-        print!("           ");
+        print!("                        ");
         io::stdout().flush().expect("bad");
         execute!(io::stdout(), cursor::MoveTo(pos.0, pos.1)).expect("bad");
     }
@@ -55,7 +55,7 @@ fn getinput(prompt: &str) -> f32 {
         } else {
             execute!(io::stdout(), cursor::MoveUp(1)).expect("bad");
             let pos = cursor::position().unwrap();
-            print!("           ");
+            print!("                        ");
             io::stdout().flush().expect("bad");
             execute!(io::stdout(), cursor::MoveTo(pos.0, pos.1)).expect("bad");
         }
